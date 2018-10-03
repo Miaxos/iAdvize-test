@@ -1,11 +1,26 @@
+@import '../../style/index.scss';
+
 .message-container {
   padding: 10px;
-  border: 1px solid red;
+  // border: 1px solid red;
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+  }
+  & h1 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-family: $FONT_STANDARD;
+    font-weight: 400;
+  }
 }
 
 .message-box {
   background-color: white;
-  width: 500px;
-  height: 700px;
+  width: 600px;
+  height: 60vh;
   border-radius: 2%;
+  overflow-y: scroll;
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+  }
 }

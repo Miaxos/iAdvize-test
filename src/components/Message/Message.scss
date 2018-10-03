@@ -1,0 +1,23 @@
+@import '../../style/index.scss';
+
+.message {
+  display: flex;
+  padding: 5px 10px;
+  & .message-content {
+    border-radius: 15px;
+    padding: 0 15px;
+    word-break: break-all;
+    max-width: 70%;
+    color: white;
+    font-family: $FONT_STANDARD;
+    font-size: 18px;
+  }
+  & .from-me {
+    margin-left: auto;
+    background-color: lightgreen;
+  }
+  & .from-them {
+    margin-left: 0;
+    background-color: lightgray;
+  }
+}
