@@ -2,7 +2,14 @@ import { createStore, compose } from 'redux';
 import reducer from './reducer';
 
 const initialState = {
-  messages: [],
+  messages: [
+    {
+      id: '12',
+      to: 'Willis',
+      from: 'Bruce',
+      content: 'Test',
+    },
+  ],
 };
 
 const store = () => createStore(

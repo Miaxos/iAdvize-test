@@ -1,11 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Message() {
+function Message({ content }) {
   return (
     <div className="message from-me">
-      message
+      <p>{content}</p>
     </div>
   );
 }
+
+Message.propTypes = {
+  content: PropTypes.string.isRequired,
+};
 
 export default Message;

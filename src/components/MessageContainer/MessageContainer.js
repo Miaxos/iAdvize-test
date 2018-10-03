@@ -4,12 +4,18 @@ import Message from '../Message';
 import MessageInput from '../MessageInput';
 import './MessageContainer.scss';
 
-function MessageContainer({ name }) {
+function MessageContainer({ name, messages = [] }) {
+  const messageJX = messages.map(message => (
+    <Message
+      key={message.id}
+      content={message.content}
+    />
+  ));
   return (
     <div className="message-container">
       <h1>{name}</h1>
       <div className="message-box">
-        <Message />
+        {messageJX}
       </div>
       <MessageInput />
     </div>
@@ -18,6 +24,7 @@ function MessageContainer({ name }) {
 
 MessageContainer.propTypes = {
   name: PropTypes.string.isRequired,
+  messages: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default MessageContainer;
