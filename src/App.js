@@ -11,6 +11,8 @@ class App extends Component {
     send: PropTypes.instanceOf(Function).isRequired,
   }
 
+  // To do filter for user
+
   render() {
     const { messages, send } = this.props;
     return (
@@ -18,12 +20,12 @@ class App extends Component {
         <div className="app-center">
           <MessageContainer
             name="Bruce"
-            messages={messages.filter(x => x.to === 'Bruce')}
+            messages={messages}
             send={content => send({ to: 'Willis', from: 'Bruce', content })}
           />
           <MessageContainer
             name="Willis"
-            messages={messages.filter(x => x.to === 'Willis')}
+            messages={messages}
             send={content => send({ to: 'Bruce', from: 'Willis', content })}
           />
         </div>

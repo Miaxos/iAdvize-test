@@ -17,8 +17,9 @@ function MessageContainer({ name, messages = [], send }) {
       <div className="message-box">
         {messageJX}
       </div>
-      <button type="button" onClick={() => send('tesdzedzedt')}>Click</button>
-      <MessageInput />
+      <MessageInput
+        send={send}
+      />
     </div>
   );
 }
