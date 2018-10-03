@@ -4,7 +4,7 @@ import Message from '../Message';
 import MessageInput from '../MessageInput';
 import './MessageContainer.scss';
 
-function MessageContainer({ name, messages = [] }) {
+function MessageContainer({ name, messages = [], send }) {
   const messageJX = messages.map(message => (
     <Message
       key={message.id}
@@ -17,6 +17,7 @@ function MessageContainer({ name, messages = [] }) {
       <div className="message-box">
         {messageJX}
       </div>
+      <button type="button" onClick={() => send('tesdzedzedt')}>Click</button>
       <MessageInput />
     </div>
   );
@@ -25,6 +26,7 @@ function MessageContainer({ name, messages = [] }) {
 MessageContainer.propTypes = {
   name: PropTypes.string.isRequired,
   messages: PropTypes.instanceOf(Array).isRequired,
+  send: PropTypes.instanceOf(Function).isRequired,
 };
 
 export default MessageContainer;

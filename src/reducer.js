@@ -3,12 +3,12 @@ import { SEND_NEW_MESSAGE } from './actions';
 const reducer = (state = {}, action) => {
   switch (action.type) {
   case SEND_NEW_MESSAGE: {
-    const { message } = state;
+    const { messages } = state;
     const {
       id, to, from, content,
     } = action.payload;
     const newMessage = [
-      ...message,
+      ...messages,
       {
         id,
         to,
@@ -16,7 +16,7 @@ const reducer = (state = {}, action) => {
         content,
       },
     ];
-    return { ...state, message: newMessage };
+    return { ...state, messages: newMessage };
   }
   default:
     return state;
