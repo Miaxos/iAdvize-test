@@ -4,9 +4,10 @@ import './Message.scss';
 
 function Message({ message, name }) {
   const customClass = (name === message.from ? 'from-me' : 'from-them');
+  const easterEgg = (message.content === 'Yippee Ki Yay' ? 'bruce' : '');
   return (
     <div className="message">
-      <div className={`message-content ${customClass}`}>
+      <div className={`message-content ${customClass} ${easterEgg}`}>
         <p>{message.content}</p>
       </div>
     </div>
