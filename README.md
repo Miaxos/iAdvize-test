@@ -1,10 +1,10 @@
 # iAdvize - Test
 
-![Preview](preview.gif)
+![Preview](bruce.gif)
 
 # Demo
 
-Live demo [here]()
+Live demo [here](https://awesome-cori-b9f451.netlify.com/)
 
 # Start
 
