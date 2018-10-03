@@ -3,12 +3,6 @@ import reducer from './reducer';
 
 const initialState = {
   messages: [
-    {
-      id: '12',
-      to: 'Willis',
-      from: 'Bruce',
-      content: 'Test',
-    },
   ],
 };
 
